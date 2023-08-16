@@ -10,75 +10,150 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "header-circles": "url('./assets/home/bg-pattern-header.svg')",
+            },
+            fontFamily: {
+              "font-kumbh": "Kumbh Sans",
+            },
+            colors: {
+              "dark-blue": "#5175FF",
+              gray: "#747B95",
+              "background-color": "#F2F2F2",
+              "light-blue": "#829CFF",
+              "footer-color": "#25293A",
+              "dark-gray": "#333950",
+            },
+            boxShadow: {
+              "3xl": "0 25px 60px -15px rgba(0, 0, 0, 0.5)",
+            },
+          },
+        },
+      };
+    </script>
 
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
-  <body>
-    <header>
-      <img src="./assets/shared/logo.svg" />
-    </header>
-    <div>
-      <div>
-        <h1>A simple solution to complex tasks is coming soon</h1>
+  <body class="text-font-kumbh bg-background-color">
+    <section class="intro bg-header-circles bg-cover bg-[center_top_-15rem]">
+      <div class="py-20">
+        <img class="mx-auto" src="./assets/shared/logo.svg" />
+      </div>
+      <div class="flex flex-col-reverse">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-3xl text-center font-bold">
+            A simple solution to complex tasks is coming soon
+          </h1>
 
-        <p>
-          Say goodbye to inefficient juggling of multiple apps, teams, and
-          projects. Officelite is the new collaboration platform built with an
-          intuitive interface to improve productivity.
+          <p class="text-center text-gray">
+            Say goodbye to inefficient juggling of multiple apps, teams, and
+            projects. Officelite is the new collaboration platform built with an
+            intuitive interface to improve productivity.
+          </p>
+
+          <button
+            class="bg-dark-blue text-white text-dark-blue w-1/2 mx-auto py-3 px-2 rounded-3xl font-bold shadow-3xl"
+          >
+            Get Started
+          </button>
+        </div>
+        <img
+          class="w-[50%] mx-auto"
+          src="./assets/home/illustration-charts.svg"
+        />
+      </div>
+    </section>
+    <section class="cards grid grid-col p-4 my-6 gap-6">
+      <div
+        class="card-one bg-white rounded-lg p-8 flex flex-col gap-4 bg-dark-blue text-center"
+      >
+        <p class="font-bold">Basic</p>
+        <p class="text-3xl font-bold">Free</p>
+        <p>Up to 5 users for free</p>
+        <ul class="text-gray">
+          <li>Basic document collaboration</li>
+          <li>2 gb storage</li>
+          <li>Great security and support</li>
+        </ul>
+        <button
+          class="bg-light-blue text-white w-1/2 mx-auto py-3 px-2 rounded-3xl font-bold"
+        >
+          Try for Free
+        </button>
+      </div>
+
+      <div
+        class="card-two bg-header-circles bg-dark-blue text-white rounded-lg p-8 flex flex-col gap-4 bg-dark-blue text-center"
+      >
+        <p class="font-bold">Pro</p>
+        <p class="text-3xl font-bold">$9.99</p>
+        <p>Per user, billed monthly</p>
+        <ul class="">
+          <li>All essential integrations</li>
+          <li>50 gb storage</li>
+          <li>More control and insights</li>
+        </ul>
+        <button
+          class="bg-white text-dark-blue w-1/2 mx-auto py-3 px-2 rounded-3xl font-bold"
+        >
+          Try for Free
+        </button>
+      </div>
+
+      <div
+        class="card-three bg-white rounded-lg p-8 flex flex-col gap-4 bg-dark-blue text-center"
+      >
+        <p class="font-bold">Ultimate</p>
+        <p class="text-3xl font-bold">$19.99</p>
+        <p>Per user, billed monthly</p>
+        <ul class="text-gray">
+          <li>Robust work management</li>
+          <li>100 gb storage</li>
+          <li>VIP support</li>
+        </ul>
+
+        <button
+          class="bg-light-blue text-white w-1/2 mx-auto py-3 px-2 rounded-3xl font-bold"
+        >
+          Try for Free
+        </button>
+      </div>
+    </section>
+    <footer
+      class="bg-footer-color bg-header-circles bg-no-repeat bg-[center_top_-15rem] h-[1248px] p-4 text-white flex"
+    >
+      <div class="self-end text-center my-6 mx-auto">
+        <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+        <p class="uppercase font-bold">
+          Coming <span class="text-dark-blue">4 Nov 2020</span>
         </p>
 
+        <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+        <div>
+          <div class="bg-dark-gray">
+            <p class="text-gray">
+              <span class="block text-4xl text-white">47</span> Days
+            </p>
+          </div>
+          <div>
+            <p><span class="block text-4xl text-white">07</span> hours</p>
+          </div>
+          <div>56 Min</div>
+          <div>14 sec</div>
+        </div>
         <button>Get Started</button>
       </div>
-      <img src="./assets/home/illustration-charts.svg" />
-    </div>
-
-    <div>
-      <p>Basic</p>
-      <p>Free</p>
-      <p>Up to 5 users for free</p>
-      <ul>
-        <li>Basic document collaboration</li>
-        <li>2 gb storage</li>
-        <li>Great security and support</li>
-      </ul>
-      <button>Try for Free</button>
-    </div>
-
-    <div>
-      <p>Pro</p>
-      <p>$9.99</p>
-      <p>Per user, billed monthly</p>
-      <ul>
-        <li>All essential integrations</li>
-        <li>50 gb storage</li>
-        <li>More control and insights</li>
-      </ul>
-      <button>Try for Free</button>
-    </div>
-
-    <div>
-      <p>Ultimate</p>
-      <p>$19.99</p>
-      <p>Per user, billed monthly</p>
-      <ul>
-        <li>Robust work management</li>
-        <li>100 gb storage</li>
-        <li>VIP support</li>
-      </ul>
-
-      <button>Try for Free</button>
-    </div>
-
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    <p>Coming 4 Nov 2020</p>
-
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    <div>
-      <div>47 Days</div>
-      <div>07 hours</div>
-      <div>56 Min</div>
-      <div>14 sec</div>
-    </div>
-    <button>Get Started</button>
+    </footer>
   </body>
 </html>
