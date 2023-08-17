@@ -46,8 +46,10 @@
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
   <body class="text-font-kumbh bg-background-color">
-    <section class="intro bg-header-circles bg-cover bg-[center_top_-15rem]">
-      <div class="sm:mx-auto sm:max-w-[90%]">
+    <section
+      class="intro bg-header-circles bg-cover bg-[center_top_-15rem] md:max-w-5xl md:mx-auto"
+    >
+      <div class="sm:mx-auto sm:max-w-[90%] md:my-3">
         <div class="py-20 sm:py-3">
           <img class="mx-auto sm:mx-0" src="./assets/shared/logo.svg" />
         </div>
@@ -80,13 +82,13 @@
     </section>
     <section class="cards p-4 h-[250px] relative">
       <div
-        class="grid grid-col md:grid-cols-3 gap-6 my-6 absolute w-[90%] top-30 left-1/2 transform -translate-x-1/2"
+        class="grid grid-col md:grid-cols-3 gap-6 my-6 absolute w-[90%] top-30 left-1/2 transform -translate-x-1/2 md:max-w-5xl"
       >
         <div class="card-one bg-white rounded-lg p-8 flex flex-col gap-6">
           <div
-            class="flex flex-col md:flex-col md:text-center gap-6 text-center sm:flex-row sm:text-left sm:justify-between"
+            class="flex flex-col md:flex-col md:text-center gap-8 text-center sm:flex-row sm:text-left sm:justify-between"
           >
-            <div>
+            <div class="flex flex-col gap-3">
               <p class="font-bold">Basic</p>
               <p class="text-3xl font-bold">Free</p>
               <p>Up to 5 users for free</p>
@@ -108,9 +110,9 @@
           class="card-two bg-header-circles bg-dark-blue text-white rounded-lg p-8 flex flex-col gap-6 bg-dark-blue text-center"
         >
           <div
-            class="flex flex-col md:flex-col md:text-center gap-6 text-center sm:flex-row sm:text-left sm:justify-between"
+            class="flex flex-col md:flex-col md:text-center gap-8 text-center sm:flex-row sm:text-left sm:justify-between"
           >
-            <div>
+            <div class="flex flex-col gap-3">
               <p class="font-bold">Pro</p>
               <p class="text-3xl font-bold">$9.99</p>
               <p>Per user, billed monthly</p>
@@ -129,12 +131,12 @@
         </div>
 
         <div
-          class="card-three bg-white rounded-lg p-8 flex flex-col gap-6 bg-dark-blue text-center"
+          class="card-three bg-white rounded-lg p-8 flex flex-col gap-8 bg-dark-blue text-center"
         >
           <div
             class="flex flex-col md:flex-col md:text-center gap-6 text-center sm:flex-row sm:text-left sm:justify-between"
           >
-            <div>
+            <div class="flex flex-col gap-3">
               <p class="font-bold">Ultimate</p>
               <p class="text-3xl font-bold">$19.99</p>
               <p>Per user, billed monthly</p>
