@@ -143,11 +143,17 @@
             placeholder="Name"
           />
           <label class="hidden" for="email"></label>
-          <input
-            class="px-2 py-3 border-0 border-slate-200 border-b-2"
-            id="email"
-            placeholder="Email address"
-          />
+          <div class="relative border-0 border-slate-200 border-b-2">
+            <input
+              class="text-input px-2 py-3"
+              id="email"
+              placeholder="Email address"
+            />
+            <img
+              class="absolute top-4 right-3 hidden wrong-format"
+              src="./assets/sign-up/icon-cross.svg"
+            />
+          </div>
 
           <select
             class="py-3 px-2 border-slate-200 border-b-2 h-12"

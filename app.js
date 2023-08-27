@@ -10,6 +10,8 @@ function validateEmail(email) {
 const emailInput = document.getElementById("email"); // Assuming your email input field has an id of "email"
 const email = emailInput.value;
 const form = document.querySelector("form");
+const wrongFormat = document.querySelector(".wrong-format");
+const textInput = document.querySelector(".text-input");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -19,5 +21,7 @@ form.addEventListener("submit", (event) => {
   } else {
     // Email is invalid
     console.log("Email is invalid");
+    wrongFormat.classList.remove("hidden");
+    textInput.classList.add("text-red-500");
   }
 });
