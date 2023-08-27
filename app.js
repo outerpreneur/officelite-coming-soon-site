@@ -18,6 +18,8 @@ form.addEventListener("submit", (event) => {
   if (validateEmail(emailInput.value)) {
     // Email is valid
     console.log("Email is valid");
+    wrongFormat.classList.add("hidden");
+    textInput.classList.remove("text-red-500");
   } else {
     // Email is invalid
     console.log("Email is invalid");
